@@ -40,7 +40,7 @@ export default {
 				apikey: this.apiKey,
 				plot: "full",
 				type: "movie",
-				page: "null",
+				page: null,
 				s: null
 			}
 		}
