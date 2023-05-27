@@ -14,7 +14,7 @@
 
 <script>
 export default {
-	name: "Footer",
-	props: ["copyright", "link", "linkText"]
+	name: 'Footer',
+	props: ['copyright', 'link', 'linkText'],
 }
 </script>

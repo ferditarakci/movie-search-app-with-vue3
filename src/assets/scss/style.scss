@@ -1,4 +1,4 @@
-$fontFamily: "Roboto", sans-serif;
+$fontFamily: 'Roboto', sans-serif;
 $bcolor: #dadada;
 
 body {
@@ -10,14 +10,28 @@ body {
 }
 
 // Font tanımımızı yapıyoruz
-body, h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-input, select, textarea, button {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+input,
+select,
+textarea,
+button {
 	font-family: $fontFamily;
 }
 
 .red {
-	color: red
+	color: red;
 }
 
 // H1 olarak eklediğimiz sayfa başlığımızın görünümünü ayarlıyoruz.
@@ -29,8 +43,8 @@ header h1 {
 
 // Arama form kutusu ve butonunun genel görünümünü ayarlıyoruz.
 .search {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 
 	.label {
 		position: relative;
@@ -60,7 +74,7 @@ header h1 {
 
 		li {
 			position: relative;
-			padding: .5rem 40px .5rem .75rem;
+			padding: 0.5rem 40px 0.5rem 0.75rem;
 			line-height: 1.4;
 			font-size: 16px;
 			font-weight: 400;
@@ -77,8 +91,8 @@ header h1 {
 				content: counter(li);
 			}
 
-			&:nth-child(-n+9)::before {
-				content: "0"counter(li)".";
+			&:nth-child(-n + 9)::before {
+				content: '0' counter(li) '.';
 			}
 
 			.remove {
@@ -103,7 +117,6 @@ header h1 {
 		transform: translateY(0);
 	}
 }
-
 
 // API'dan dönen içeriğin nasıl görüneceğini belirliyoruz.
 .movies {

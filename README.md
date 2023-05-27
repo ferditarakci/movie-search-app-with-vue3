@@ -5,19 +5,20 @@ Yıllar önce HTML5, SCSS/CSS3 ve jQuery teknolojileri ile geliştirdiğim ve fi
 
 ### Kullanım
 OMDb Api key oluşturmak için https://www.omdbapi.com/apikey.aspx linkine gidin.
-Generate API Key bölümünden API anahtarınızı oluşturup **src/App.vue** dosyasında **apiKey** attribute'una ekleyin.
+Generate API Key bölümünden API anahtarınızı oluşturup **.env veya .env.development veya .env.local** dosyasında **VUE_APP_API_KEY** değişkenine ekleyin.
 
 ### English
 It was an application that I developed years ago with HTML5, SCSS/CSS3 and jQuery technologies and I listed movies by querying the OMDb API. Now I've re-coded it with **Vue 3** by developing it a bit more.
 
 ### Usage
 To generate OMDb Api key, go to https://www.omdbapi.com/apikey.aspx.
-Generate your API key from the Generate API Key section and add it to the **apiKey** attribute in the **src/App.vue** file.
+Generate your API key from the Generate API Key section and add it to the **VUE_APP_API_KEY** variable in the **.env or .env.development or .env.local** file.
 
 <br>
 
 ```html
-<Movies apiKey="API_KEY" ... />
+<Movies :apiKey="process.env.VUE_APP_API_KEY" ... />
+Add VUE_APP_API_KEY = "API_KEY" in .env or .env.development or .env.local file
 ```
 
 <br>

@@ -1,30 +1,48 @@
 <template>
 	<div class="container py-5">
-		<Header title="IMDb'de FİLM ARA" />
-		<Search placeHolder="Aranacak kelime..." buttonText="Ara" :searchText="searchText" :totalResult="totalResult" @submit-data="searchEvent" />
-		<Movies apiKey="API_KEY" ratingText="IMDb Puanı:" :searchText="searchText" :watchSearchText="searchText" @total-results="totalResultData" />
-		<Footer copyright="Copyright 2021" link="https://www.ferditarakci.com" linkText="Created by Ferdi Tarakcı" />
+		<Header :title="title" />
+		<Search
+			placeHolder="Search word..."
+			buttonText="Search"
+			:searchText="searchText"
+			:totalResult="totalResult"
+			@submit-data="searchEvent"
+		/>
+		<Movies
+			ratingText="IMDb Rating:"
+			:apiKey="apiKey"
+			:searchText="searchText"
+			:watchSearchText="searchText"
+			@total-results="totalResultData"
+		/>
+		<Footer
+			copyright="Copyright 2021"
+			link="https://www.ferditarakci.com.tr"
+			linkText="Created by Ferdi Tarakcı"
+		/>
 	</div>
 </template>
 
 <script>
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Search from "./components/Search"
-import Movies from "./components/Movies"
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Search from '@/components/Search'
+import Movies from '@/components/Movies'
 
 export default {
-	name: "Movie Search App",
+	name: 'Movie Search App',
 	components: {
 		Header,
 		Footer,
 		Search,
-		Movies
+		Movies,
 	},
 	data() {
 		return {
-			searchText: "the matrix",
-			totalResult: 0
+			title: process.env.VUE_APP_TITLE,
+			apiKey: process.env.VUE_APP_API_KEY,
+			searchText: 'the matrix',
+			totalResult: 0,
 		}
 	},
 	methods: {
@@ -33,12 +51,12 @@ export default {
 		},
 		searchEvent(data) {
 			this.searchText = data
-		}
-	}
+		},
+	},
 }
 </script>
 
 <!-- SCSS formatındaki stil dosyamızı uygulamaya ekliyoruz. -->
 <style lang="scss">
-	@import "./assets/scss/style.scss";
+@import './assets/scss/style.scss';
 </style>
