@@ -18,7 +18,7 @@
 		<Footer
 			copyright="Copyright 2021"
 			link="https://www.ferditarakci.com.tr"
-			linkText="Created by Ferdi Tarakcı"
+			linkText="Developed by Ferdi Tarakci"
 		/>
 	</div>
 </template>
