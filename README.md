@@ -3,6 +3,8 @@
 
 Yıllar önce HTML5, SCSS/CSS3 ve jQuery teknolojileri ile geliştirdiğim ve filmleri OMDb API'sini sorgulayarak listelediğim bir uygulamaydı. Şimdi **Vue 3** ile biraz daha geliştirerek yeniden kodladım.
 
+Demo: [https://movie-search.ferditarakci.com.tr](https://movie-search.ferditarakci.com.tr)
+
 ### Kullanım
 OMDb Api key oluşturmak için https://www.omdbapi.com/apikey.aspx linkine gidin.
 Generate API Key bölümünden API anahtarınızı oluşturup **.env veya .env.development veya .env.local** dosyasında **VUE_APP_API_KEY** değişkenine ekleyin.
